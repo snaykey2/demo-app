@@ -20,3 +20,8 @@ def truncate(text: str, length: int, suffix: str = "…") -> str:
 def titlecase(text: str) -> str:
     """Capitalize the first letter of each whitespace-separated word."""
     return " ".join(word[:1].upper() + word[1:] for word in text.split())
+
+
+def swapcase_all(text):
+    """Swap the case of every character."""
+    return text.swapcase()
