@@ -20,3 +20,8 @@ def truncate(text: str, length: int, suffix: str = "…") -> str:
 def titlecase(text: str) -> str:
     """Capitalize the first letter of each whitespace-separated word."""
     return " ".join(word[:1].upper() + word[1:] for word in text.split())
+
+
+def count_vowels(text):
+    """Count vowels (a/e/i/o/u), case-insensitive."""
+    return sum(c in "aeiou" for c in text.lower())
