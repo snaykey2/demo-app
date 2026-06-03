@@ -20,3 +20,9 @@ def truncate(text: str, length: int, suffix: str = "…") -> str:
 def titlecase(text: str) -> str:
     """Capitalize the first letter of each whitespace-separated word."""
     return " ".join(word[:1].upper() + word[1:] for word in text.split())
+
+
+def reverse(text: str) -> str:
+    """Return the string reversed."""
+    return text[::-1]
+
