@@ -20,3 +20,8 @@ def truncate(text: str, length: int, suffix: str = "…") -> str:
 def titlecase(text: str) -> str:
     """Capitalize the first letter of each whitespace-separated word."""
     return " ".join(word[:1].upper() + word[1:] for word in text.split())
+
+
+def zfill_left(text, width):
+    """Left-pad text with zeros to the given width."""
+    return text.zfill(width)
