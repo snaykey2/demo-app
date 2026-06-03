@@ -20,3 +20,8 @@ def truncate(text: str, length: int, suffix: str = "…") -> str:
 def titlecase(text: str) -> str:
     """Capitalize the first letter of each whitespace-separated word."""
     return " ".join(word[:1].upper() + word[1:] for word in text.split())
+
+
+def initials(text):
+    """Return uppercase initials of each word."""
+    return "".join(w[0].upper() for w in text.split() if w)
