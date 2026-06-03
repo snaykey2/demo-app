@@ -20,3 +20,9 @@ def truncate(text: str, length: int, suffix: str = "…") -> str:
 def titlecase(text: str) -> str:
     """Capitalize the first letter of each whitespace-separated word."""
     return " ".join(word[:1].upper() + word[1:] for word in text.split())
+
+
+def ordinal(n):
+    """Return the ordinal string for an integer (1 -> '1st')."""
+    suffix = "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return str(n) + suffix
